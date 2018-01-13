@@ -17,14 +17,16 @@ public class ChristmasTree {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        Scanner in = new Scanner(System.in);
-
-        char sym = in.next().charAt(0);
         int n = 15;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the tree heigth (Eg:-15,20..)");
+        n=in.nextInt();
+        System.out.println("Enter the Character:");
+        char sym = in.next().charAt(0);
+        
         for (int k = 0; k < n; k++) {
 
-            for (int i = 1; i <= (15 - k) / 2; i++) {
+            for (int i = 1; i <= (n - k) / 2; i++) {
                 System.out.print(" ");
             }
 
@@ -44,10 +46,10 @@ public class ChristmasTree {
         //
         // x+w+x=15
         // x=(15-w)
-        int h = 15 / 3;
+        int h = n / 3;
         for (int k = 0; k < h; k++) {
-            int w = 15 / 5;
-            for (int i = 1; i <= (15 - w) / 2; i++) {
+            int w = n / 5;
+            for (int i = 1; i <= (n - w) / 2; i++) {
                 System.out.print(" ");
             }
 
